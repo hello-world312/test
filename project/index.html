@@ -7,7 +7,41 @@
     <title>ICU Vasopressor &amp; Inotrope Infusion Rate Calculator</title>
   </head>
   <body>
-    <div id="root"></div>
+    <div id="root">
+      <div class="drug-selection-bar">
+        <!-- Dropdown for selecting drugs -->
+        <select name="drug-selector" id="drug-selector">
+          <option value="">Select a drug...</option>
+          <option value="drug1">Drug 1</option>
+          <option value="drug2">Drug 2</option>
+        </select>
+      </div>
+
+      <!-- Moved drug information icon below the selection bar -->
+      <div class="drug-info-icon">
+        <button
+          onclick="showDrugInfo()"
+          class="mt-2 p-2 text-gray-500 hover:text-gray-700"
+          title="View medication information"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            class="h-5 w-5"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M13 16h-1v-4h-1m1-4h.01M12 18.5a6.5 6.5 0 100-13 6.5 6.5 0 000 13z"
+            />
+          </svg>
+        </button>
+      </div>
+    </div>
+
     <script type="module" src="/src/main.tsx"></script>
   </body>
 </html>
